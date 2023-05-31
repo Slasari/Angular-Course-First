@@ -2,6 +2,8 @@
     <p>Nombre: {{nombre}}</p>
     <p>Apellido: {{apellido}}</p>
     <p>Edad: {{getEdad()}}</p>
-    <input placeholder="edad"/>
-    <p>Empresa: {{empresa}}</p>
+    <p>Empresa: {{empresa.value}}</p>
+    <input type="text" #empresa (keyup)="0"/>
+    <br>
+    <br>
 </main>
