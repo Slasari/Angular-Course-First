@@ -3,7 +3,9 @@
     <p>Apellido: {{apellido}}</p>
     <p>Edad: {{getEdad()}}</p>
     <p>Empresa: {{empresa.value}}</p>
-    <input type="text" #empresa (keyup)="0"/>
+    <input type="text" #empresa (keyup)="0" [disabled]="habilitarInput"/>
     <br>
     <br>
+    Registrado: <input type="checkbox" id="registro" [checked]="userRegistrado"/>
 </main>
+{{getRegistroUsuario()}}

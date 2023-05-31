@@ -17,4 +17,11 @@ export class EmpleadoComponent {
     return this.edad;
     //Esto es un metodo getter y sirve para acceder a una propiedad private.
   }
+  habilitarInput: boolean = true;
+  userRegistrado: boolean = false;
+
+  getRegistroUsuario(){
+
+    this.userRegistrado=false
+  }
 }
