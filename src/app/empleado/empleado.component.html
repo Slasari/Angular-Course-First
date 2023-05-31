@@ -1,15 +1,26 @@
 <main>
-    <p>Nombre: {{nombre}}</p>
-    <p>Apellido: {{apellido}}</p>
-    <p>Edad: {{getEdad()}}</p>
-    <p>Empresa: {{empresa.value}}</p>
-    <input type="text" #empresa (keyup)="0" [disabled]="habilitarInput"/>
-    <br>
-    <br>
-    {{textoRegistro}}
-    <br>
-    <br>
-    Registrado: <input type="radio" value="si" name="registro" id="registro" [checked]="userRegistrado" (click)="register($event)"/>
-    No Registrado: <input type="radio" value="no" name="registro" (click)="register($event)" />
+  <p>Nombre: {{ nombre }}</p>
+  <p>Apellido: {{ apellido }}</p>
+  <p>Edad: {{ getEdad() }}</p>
+  <p>Empresa: {{ empresa }}</p>
+  <!-- <input type="text" #empresa (keyup)="0" [disabled]="habilitarInput"/> -->
+  <input type="text" [(ngModel)]="empresa" />
+  <!--ngModel utiliza banana in box [()] lo que significa que este dato es two way binding, viaja del html al ts, y del ts al html-->
+  <br />
+  <br />
+  {{ textoRegistro }}
+  <br />
+  <br />
+  Registrado:
+  <input
+    type="radio"
+    value="si"
+    name="registro"
+    id="registro"
+    [checked]="userRegistrado"
+    (click)="register($event)"
+  />
+  No Registrado:
+  <input type="radio" value="no" name="registro" (click)="register($event)" />
 </main>
-{{getRegistroUsuario()}}
+{{ getRegistroUsuario() }}

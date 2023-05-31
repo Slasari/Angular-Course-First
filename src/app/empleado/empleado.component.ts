@@ -11,13 +11,14 @@ export class EmpleadoComponent {
   apellido: string = 'Salcito';
   private edad: number = 23;
   //private: esta propiedad solo es accesible desde el scout donde fue declarada.
-  /* empresa: string = 'Compra Gamer' */
+  empresa: string = 'Compra Gamer'
+  
 
   getEdad(){
     return this.edad;
     //Esto es un metodo getter y sirve para acceder a una propiedad private.
   }
-  habilitarInput: boolean = true;
+  habilitarInput: boolean = false;
   userRegistrado: boolean = false;
   textoRegistro: string = "No hay registros";
 
