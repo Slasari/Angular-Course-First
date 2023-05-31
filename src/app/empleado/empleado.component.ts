@@ -19,9 +19,22 @@ export class EmpleadoComponent {
   }
   habilitarInput: boolean = true;
   userRegistrado: boolean = false;
+  textoRegistro: string = "No hay registros";
 
   getRegistroUsuario(){
 
     this.userRegistrado=false
+  }
+
+  register(event:any){
+
+    /* alert('El usuario se acaba de registrar'); */
+    
+
+    if((event.target).value == 'si'){
+      this.textoRegistro = "Tenemos usuarios!";
+    } else {
+      this.textoRegistro = "No hay registros";
+    }
   }
 }
